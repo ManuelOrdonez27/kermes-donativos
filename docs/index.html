@@ -579,13 +579,17 @@ document.getElementById('form').addEventListener('submit', async event => {
     button.disabled = false;
 
     if (error) {
-        showMsg(
-            'No se pudo guardar. Revisa la configuración de Supabase.',
-            true
-        );
-        console.error(error);
-        return;
-    }
+    console.error('Error de Supabase:', error);
+
+    showMsg(
+        'Error: ' + error.message +
+        (error.code ? ' (Código: ' + error.code + ')' : ''),
+        true
+    );
+
+    button.disabled = false;
+    return;
+}
 
     showMsg('¡Donativo guardado correctamente!');
     await load();
