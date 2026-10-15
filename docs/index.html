@@ -14,8 +14,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 // Reemplaza estos valores con los de tu proyecto Supabase.
-const SUPABASE_URL = 'PEGA_AQUI_TU_PROJECT_URL';
-const SUPABASE_PUBLISHABLE_KEY = 'PEGA_AQUI_TU_PUBLISHABLE_KEY';
+const SUPABASE_URL = 'https://jgjfsjegxhohjbupdhtb.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_hXWm-YSbL14TY_LlSaxLmQ_morGJVDR';
 const groups=Array.from({length:6},(_,i)=>[`${i+1}° A`,`${i+1}° B`]).flat();
 const select=document.getElementById('group');groups.forEach(g=>{const o=document.createElement('option');o.value=o.textContent=g;select.append(o)});
 const msg=document.getElementById('message');const cards=document.getElementById('cards');let data=[];let client=null;
